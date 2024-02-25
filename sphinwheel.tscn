@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dniqvuriennj7"]
+
+[ext_resource type="Script" path="res://spin.gd" id="1_qqy6l"]
+[ext_resource type="Script" path="res://draw_wheel.gd" id="3_ft3wp"]
+
+[node name="Rad" type="Node2D"]
+
+[node name="Halter" type="StaticBody2D" parent="."]
+
+[node name="Achse" type="PinJoint2D" parent="."]
+node_a = NodePath("../Halter")
+node_b = NodePath("../Scheibe")
+
+[node name="Scheibe" type="RigidBody2D" parent="."]
+script = ExtResource("1_qqy6l")
+
+[node name="Segmente" type="Node2D" parent="Scheibe"]
+position = Vector2(0, -1)
+script = ExtResource("3_ft3wp")
+
+[node name="Tick" type="Polygon2D" parent="."]
+position = Vector2(-375, 0)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, -60, 30, -60, -30)
+
+[node name="Line2D" type="Line2D" parent="Tick"]
+points = PackedVector2Array(0, 0, -60, 30, -60, -30)
+closed = true
+width = 3.0
+joint_mode = 2
+antialiased = true
