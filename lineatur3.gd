@@ -18,8 +18,5 @@ extends Node2D
 
 
 func _draw():
-	for i in range(4):
-		@warning_ignore("integer_division")
-		draw_line(Vector2(0, i*height/3), Vector2(width, i*height/3), Color.DARK_GRAY, line_width)
-	for i in range(2):
-		draw_line(Vector2(i*width, 0), Vector2(i*width, height), Color.DARK_GRAY, line_width)
+	var rect = Rect2(0, 0, width, height)
+	draw_rect(rect, Color.DARK_GRAY, false, line_width)
