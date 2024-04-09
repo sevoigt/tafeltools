@@ -18,7 +18,7 @@ func _draw():
 				  Color.GOLD, Color.AQUAMARINE, Color.CRIMSON,
 				  Color.BLUE_VIOLET]
 				
-	var labels = ["Cat", "Dog", "Budgie", "Cow", "Elefant", "Fish", "Weasel"]
+	var labels = ["Kid", "Beef", "Rob", "Dog", "Budgie", "Cow", "Elefant", "Fish", "Weasel"]
 
 	var num_segments : int = len(labels)	
 	var label_script = load("res://tools/spinwheel/label.gd")
