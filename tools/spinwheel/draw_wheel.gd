@@ -14,11 +14,11 @@ func _draw():
 	
 	#draw_string(default_font, Vector2(0, 0), resolution, HORIZONTAL_ALIGNMENT_LEFT, -1, default_font_size)
 
-	var colors = [Color.INDIAN_RED, Color.CADET_BLUE, Color.CORAL,
-				  Color.GOLD, Color.AQUAMARINE, Color.CRIMSON,
-				  Color.BLUE_VIOLET]
+	var colors = [Color.MEDIUM_PURPLE, Color.CADET_BLUE, Color.CORAL,
+				  Color.GOLD, Color.CORNFLOWER_BLUE, Color.CRIMSON,
+				  Color.MISTY_ROSE]
 				
-	var labels = ["Kid", "Beef", "Rob", "Dog", "Budgie", "Cow", "Elefant", "Fish", "Weasel"]
+	var labels = ["Kid", "Beef", "Rob", "Dog", "Budgie", "Cow", "Fish"]
 
 	var num_segments : int = len(labels)	
 	var label_script = load("res://tools/spinwheel/label.gd")
@@ -52,7 +52,7 @@ func _draw():
 func draw_segment(start_angle : float, end_angle : float, num_points : int, fill_color : Color):
 	var points = get_arc_points(start_angle, end_angle, num_points)
 	draw_polygon(points, [ fill_color ])
-	draw_polyline(points, Color.WHITE, 2, true)
+	draw_polyline(points, Color.BLACK, 2, true)
 	
 
 

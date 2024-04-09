@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1kt6hx2h22ti"]
 
+[ext_resource type="PackedScene" uid="uid://gyu51uxhiro2" path="res://tools/tool.tscn" id="1_brrah"]
 [ext_resource type="PackedScene" uid="uid://dniqvuriennj7" path="res://tools/spinwheel/wheel.tscn" id="1_cunjs"]
-[ext_resource type="StyleBox" uid="uid://dohqtd48oj34w" path="res://button_style.tres" id="2_rtnnx"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -10,6 +10,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Tool" parent="." instance=ExtResource("1_brrah")]
+layout_mode = 1
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
@@ -26,24 +29,3 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Rad" parent="Control" instance=ExtResource("1_cunjs")]
-
-[node name="Button Home" type="Button" parent="Control"]
-visible = false
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 860.0
-offset_top = 440.0
-offset_right = 940.0
-offset_bottom = 520.0
-grow_horizontal = 0
-grow_vertical = 0
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.552941, 0.552941, 0.552941, 1)
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = ExtResource("2_rtnnx")
-text = "<<
-"

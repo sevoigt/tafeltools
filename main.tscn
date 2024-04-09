@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqe07ngyhekc6"]
+[gd_scene load_steps=4 format=3 uid="uid://dqe07ngyhekc6"]
 
 [ext_resource type="Script" path="res://scripts/btn_exit.gd" id="1_bxg1o"]
 [ext_resource type="Script" path="res://scripts/btn_load_scene.gd" id="1_ksgeh"]
+[ext_resource type="Script" path="res://fullscreen.gd" id="3_vul44"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,12 +12,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Hintergrund" type="ColorRect" parent="."]
+editor_description = "Base scene with home button for all tools"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.968627, 0.921569, 1)
+
 [node name="Lineaturen" type="Button" parent="."]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 460.0
+offset_top = 540.0
 offset_right = 550.0
-offset_bottom = 580.0
+offset_bottom = 660.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 60
 text = "Lineaturen"
 script = ExtResource("1_ksgeh")
@@ -25,9 +37,10 @@ scene = "res://tools/rulings/rulings.tscn"
 [node name="Glücksrad" type="Button" parent="."]
 layout_mode = 0
 offset_left = 720.0
-offset_top = 460.0
+offset_top = 540.0
 offset_right = 1120.0
-offset_bottom = 580.0
+offset_bottom = 660.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 60
 text = "Glücksrad"
 script = ExtResource("1_ksgeh")
@@ -36,9 +49,10 @@ scene = "res://tools/spinwheel/spinwheel.tscn"
 [node name="Jeopardy" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1300.0
-offset_top = 460.0
+offset_top = 540.0
 offset_right = 1700.0
-offset_bottom = 580.0
+offset_bottom = 660.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 60
 text = "Jeopardy"
 script = ExtResource("1_ksgeh")
@@ -50,7 +64,15 @@ offset_left = 729.0
 offset_top = 811.0
 offset_right = 1129.0
 offset_bottom = 931.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 60
 text = "Beenden
 "
 script = ExtResource("1_bxg1o")
+
+[node name="Fullscreen" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("3_vul44")

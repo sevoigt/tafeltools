@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://gyu51uxhiro2"]
+
+[ext_resource type="Script" path="res://fullscreen.gd" id="1_tkrfe"]
+[ext_resource type="StyleBox" uid="uid://dohqtd48oj34w" path="res://button_style.tres" id="3_1af0l"]
+[ext_resource type="Script" path="res://scripts/btn_load_scene.gd" id="6_0u0sc"]
+
+[node name="Tool" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tkrfe")
+
+[node name="Hintergrund" type="ColorRect" parent="."]
+editor_description = "Base scene with home button for all tools"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.968627, 0.921569, 1)
+
+[node name="Button Home" type="Button" parent="."]
+layout_mode = 2
+offset_left = 1840.0
+offset_top = 1003.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_1af0l")
+text = "X
+"
+script = ExtResource("6_0u0sc")
+scene = "res://main.tscn"

@@ -1,5 +1,5 @@
 """
-Steuert das Durchschalten der verschiedenen Varianten von Lineatur 1
+Steuert das Durchschalten der verschiedenen Varianten einer Lineatur
 """
 
 extends Button

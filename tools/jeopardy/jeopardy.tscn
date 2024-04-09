@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b6g1xl4il6wsl"]
+[gd_scene load_steps=2 format=3 uid="uid://b6g1xl4il6wsl"]
+
+[ext_resource type="PackedScene" uid="uid://gyu51uxhiro2" path="res://tools/tool.tscn" id="1_st4nv"]
 
 [node name="Jeopardy" type="Control"]
 layout_mode = 3
@@ -7,3 +9,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Tool" parent="." instance=ExtResource("1_st4nv")]
+layout_mode = 1
