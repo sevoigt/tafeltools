@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1kt6hx2h22ti"]
+[gd_scene load_steps=3 format=3 uid="uid://dqe07ngyhekc6"]
 
-[ext_resource type="PackedScene" uid="uid://dniqvuriennj7" path="res://sphinwheel.tscn" id="1_hif3b"]
+[ext_resource type="Script" path="res://scripts/btn_exit.gd" id="1_bxg1o"]
+[ext_resource type="Script" path="res://scripts/btn_load_scene.gd" id="1_ksgeh"]
 
-[node name="Main" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,18 +11,46 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Lineaturen" type="Button" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 460.0
+offset_right = 550.0
+offset_bottom = 580.0
+theme_override_font_sizes/font_size = 60
+text = "Lineaturen"
+script = ExtResource("1_ksgeh")
+scene = "res://tools/rulings/rulings.tscn"
 
-[node name="Rad" parent="Control" instance=ExtResource("1_hif3b")]
+[node name="Glücksrad" type="Button" parent="."]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 460.0
+offset_right = 1120.0
+offset_bottom = 580.0
+theme_override_font_sizes/font_size = 60
+text = "Glücksrad"
+script = ExtResource("1_ksgeh")
+scene = "res://tools/spinwheel/spinwheel.tscn"
+
+[node name="Jeopardy" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1300.0
+offset_top = 460.0
+offset_right = 1700.0
+offset_bottom = 580.0
+theme_override_font_sizes/font_size = 60
+text = "Jeopardy"
+script = ExtResource("1_ksgeh")
+scene = "res://tools/jeopardy/jeopardy.tscn"
+
+[node name="Beenden" type="Button" parent="."]
+layout_mode = 0
+offset_left = 729.0
+offset_top = 811.0
+offset_right = 1129.0
+offset_bottom = 931.0
+theme_override_font_sizes/font_size = 60
+text = "Beenden
+"
+script = ExtResource("1_bxg1o")

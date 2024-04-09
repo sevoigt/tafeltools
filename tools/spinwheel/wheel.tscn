@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dniqvuriennj7"]
 
-[ext_resource type="Script" path="res://spin.gd" id="1_qqy6l"]
-[ext_resource type="Script" path="res://draw_wheel.gd" id="3_ft3wp"]
+[ext_resource type="Script" path="res://tools/spinwheel/spin.gd" id="1_t5tfb"]
+[ext_resource type="Script" path="res://tools/spinwheel/draw_wheel.gd" id="2_4wt4b"]
 
 [node name="Rad" type="Node2D"]
 
@@ -12,11 +12,11 @@ node_a = NodePath("../Halter")
 node_b = NodePath("../Scheibe")
 
 [node name="Scheibe" type="RigidBody2D" parent="."]
-script = ExtResource("1_qqy6l")
+script = ExtResource("1_t5tfb")
 
 [node name="Segmente" type="Node2D" parent="Scheibe"]
 position = Vector2(0, -1)
-script = ExtResource("3_ft3wp")
+script = ExtResource("2_4wt4b")
 
 [node name="Tick" type="Polygon2D" parent="."]
 position = Vector2(-375, 0)

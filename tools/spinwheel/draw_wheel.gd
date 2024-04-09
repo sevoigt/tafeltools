@@ -21,7 +21,7 @@ func _draw():
 	var labels = ["Cat", "Dog", "Budgie", "Cow", "Elefant", "Fish", "Weasel"]
 
 	var num_segments : int = len(labels)	
-	var label_script = load("res://label.gd")
+	var label_script = load("res://tools/spinwheel/label.gd")
 	
 	for i in range(num_segments):
 		var arc = 2*PI / num_segments

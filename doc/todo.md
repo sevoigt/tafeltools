@@ -16,4 +16,4 @@ Was könnte man den potentiell einstellbar machen:
 # Menübedienung
 
 - muss auf jeden Fall im unteren Bereich sein, damit man gut rankommt
-- einfache, große Buttons, damit die Kameras den Fingerdruck gut Erkennen
+- einfache, große Buttons, damit die Kameras den Fingerdruck gut erkennen
